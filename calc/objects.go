@@ -23,3 +23,11 @@ func (s *objectssrvc) Show(ctx context.Context, p *objects.ShowPayload) (res *ob
 	s.logger.Print("objects.show")
 	return
 }
+
+// Insert a new object
+func (s *objectssrvc) Create(ctx context.Context, p *objects.ObjectPost) (res *objects.ObjectMedia, view string, err error) {
+	res = &objects.ObjectMedia{}
+	view = "default"
+	s.logger.Print("objects.create")
+	return
+}

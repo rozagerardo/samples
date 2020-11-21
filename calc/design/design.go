@@ -113,13 +113,13 @@ var _ = Service("objects", func() {
 		})
 
 		Result(ObjectMedia, func() {
+            // IF I REMOVE THIS VIEW USAGE, THE REDECLARED TYPES ERROR DISSAPEAR
 			View("full")
 		})
 		Error("NotFound")
 		Error("BadRequest")
 	})
     
-    // IF I COMMENT THIS METHOD, THE REDECLARED TYPES DISSAPEAR
     Method("create", func() {
 		Description("Insert a new object")
 		HTTP(func() {
