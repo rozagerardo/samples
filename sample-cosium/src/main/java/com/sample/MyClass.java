@@ -13,21 +13,20 @@ import org.springframework.transaction.annotation.Transactional;
 @SpringBootApplication
 public class MyClass implements ApplicationRunner {
 
-	private static final Logger LOG = LoggerFactory.getLogger(MyClass.class);
+  private static final Logger LOG = LoggerFactory.getLogger(MyClass.class);
 
-	@Autowired
-	EntityManager entityManager;
+  @Autowired EntityManager entityManager;
 
-	public static void main(final String... args) {
-		SpringApplication.run(MyClass.class, args);
-	}
+  public static void main(final String... args) {
+    SpringApplication.run(MyClass.class, args);
+  }
 
-	@Override
-	@Transactional
-	public void run(ApplicationArguments args) throws Exception {
+  @Override
+  @Transactional
+  public void run(ApplicationArguments args) throws Exception {
 
-		LOG.info("actual change");
+    LOG.info("actual change HERE");
 
-		LOG.info("Existing statement");
-	}
+    LOG.info("Existing statement");
+  }
 }
