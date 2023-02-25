@@ -160,7 +160,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<hibernate.version>6.1.7.Final</hibernate.version>
+		<hibernate.version>6.2.0.CR2</hibernate.version>
 		<jakarta.persistence-api.version>3.1.0</jakarta.persistence-api.version>
 		<maven-processor-plugin.version>3.3.3</maven-processor-plugin.version>
 		<build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
