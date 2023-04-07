@@ -11,9 +11,10 @@
     <description>WebFlux and Spring Security OAuth</description>
 
     <parent>
-        <groupId>com.baeldung.spring.reactive</groupId>
-        <artifactId>spring-reactive-modules</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <groupId>com.baeldung</groupId>
+        <artifactId>oauth-rest</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
     </parent>
 
     <dependencies>
