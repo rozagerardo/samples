@@ -434,7 +434,8 @@
     "redirectUris" : [ "http://localhost:8082/new-client/login/oauth2/code/custom",
     "http://localhost:8089/",
     "http://localhost:8089/auth/redirect/",
-    "http://localhost:8082/oauth-client-spring/login/oauth2/code/custom"],
+    "http://localhost:8082/oauth-client-spring/login/oauth2/code/custom",
+    "http://localhost:8080/login/oauth2/code/bael"],
     "webOrigins" : [ "+" ],
     "notBefore" : 0,
     "bearerOnly" : false,
@@ -443,7 +444,7 @@
     "implicitFlowEnabled" : true,
     "directAccessGrantsEnabled" : true,
     "serviceAccountsEnabled" : false,
-    "publicClient" : true,
+    "publicClient" : false,
     "frontchannelLogout" : false,
     "protocol" : "openid-connect",
     "attributes" : {
