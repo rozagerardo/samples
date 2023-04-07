@@ -12,7 +12,7 @@ public class WebClientChonJob {
 
     Logger logger = LoggerFactory.getLogger(WebClientChonJob.class);
 
-    private static final String RESOURCE_URI = "localhost:8082/spring-security-oauth-resource/foos/1";
+    private static final String RESOURCE_URI = "http://localhost:8081/resource-server/api/foos/1";
 
     @Autowired
     private WebClient webClient;
