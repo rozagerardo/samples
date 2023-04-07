@@ -2,7 +2,6 @@ package com.baeldung.auth.config;
 
 import java.io.File;
 
-import org.keycloak.Config.Scope;
 import org.keycloak.platform.PlatformProvider;
 import org.keycloak.services.ServicesLogger;
 
@@ -39,10 +38,5 @@ public class SimplePlatformProvider implements PlatformProvider {
 	public File getTmpDirectory() {
 		return new File(System.getProperty("java.io.tmpdir"));
 	}
-
-    @Override
-    public ClassLoader getScriptEngineClassLoader(Scope scriptProviderConfig) {
-        return null;
-    }
 
 }
