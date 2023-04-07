@@ -1,8 +1,8 @@
 package com.baeldung.webclient.manualrequest;
 
 import org.hamcrest.Matchers;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.test.web.reactive.server.WebTestClient.ResponseSpec;
 
@@ -22,7 +22,7 @@ public class OAuth2ManualRequestLiveTest {
 
     private static WebTestClient client;
 
-    @Before
+    @BeforeEach
     public void setup() {
         client = WebTestClient.bindToServer()
             .baseUrl(BASE_URL)
@@ -34,7 +34,7 @@ public class OAuth2ManualRequestLiveTest {
         ResponseSpec response = client.get()
             .uri(MANUAL_REQUEST_URI)
             .exchange();
-        
+
         response.expectStatus()
             .isOk()
             .expectBody(String.class)
