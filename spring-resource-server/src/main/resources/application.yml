@@ -1,0 +1,22 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /sample-resource-server
+
+####### resource server configuration properties
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:7070/auth/realms/sample
+          jwk-set-uri: http://localhost:7070/auth/realms/sample/protocol/openid-connect/certs
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE;
+  jpa:
+    defer-datasource-initialization: true
+    open-in-view: false
+  devtools:
+    livereload:
+      port: 35730

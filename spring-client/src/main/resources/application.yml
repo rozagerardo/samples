@@ -1,0 +1,36 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          custom:
+            client-id: sampleClient
+            client-secret: sampleSecret
+            scope: read,write
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/sample-client/login/oauth2/code/custom
+        provider:
+          custom:
+            authorization-uri: http://localhost:7070/auth/realms/sample/protocol/openid-connect/auth
+            token-uri: http://localhost:7070/auth/realms/sample/protocol/openid-connect/token
+            user-info-uri: http://localhost:7070/auth/realms/sample/protocol/openid-connect/userinfo
+            user-name-attribute: preferred_username
+  thymeleaf:
+    cache: false
+  devtools:
+    livereload:
+      port: 35729
+
+server:
+  port: 8080
+  servlet:
+    context-path: /sample-client
+
+logging:
+  level:
+    org.springframework: INFO
+
+resourceserver:
+  api:
+    foo:
+      url: http://localhost:9090/sample-resource-server/api/foos
